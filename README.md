@@ -1,1 +1,2 @@
-# awesome_rush_b_packer
+# Packer for Awesome Rush B
+
