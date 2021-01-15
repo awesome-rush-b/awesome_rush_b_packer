@@ -1,1 +1,0 @@
-# awesome_rush_b_packer
