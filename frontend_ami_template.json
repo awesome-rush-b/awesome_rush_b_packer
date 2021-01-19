@@ -35,7 +35,7 @@
         {
             "type": "shell",
             "scripts": [
-                "shell-script/base.sh"
+                "shell-script/frontend.sh"
             ],
             "pause_before": "4s"
         }

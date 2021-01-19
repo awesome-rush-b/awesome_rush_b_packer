@@ -23,10 +23,20 @@ jobs:
           arguments: -syntax-only
           target: ami_template.json
 
-      - name: Packer AMI Build
+      - name: Backend Packer AMI Build
         uses: zmingxie/packer-ami-builder@master
         with:
-          packerArgs: 'build ami_template.json'
+          packerArgs: 'build backend_ami_template.json'
+          workDir: '.'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECRETKEY }}
+          AWS_DEFAULT_REGION: us-east-1
+
+      - name: Frontend Packer AMI Build
+        uses: zmingxie/packer-ami-builder@master
+        with:
+          packerArgs: 'build frontend_ami_template.json'
           workDir: '.'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWSACCESSKEYID }}
