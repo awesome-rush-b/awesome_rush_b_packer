@@ -4,13 +4,13 @@ while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud
 sudo apt-get update -y
 
 # install nodejs
-sudo apt-get install nodejs
+sudo apt-get install nodejs -y
 
 # install npm
-sudo apt-get install npm
+sudo apt-get install npm -y
 
 # install serve
-npm install -g serve
+sudo npm install -g serve
 
 echo "*********************intalling CodeDeploy*********************"
 sudo apt-get install ruby -y
