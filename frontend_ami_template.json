@@ -19,7 +19,7 @@
             "source_ami": "{{user `source_ami`}}",
             "ssh_username": "{{user `ssh_username`}}",
             "ami_users": ["{{user `dev_user_id`}}","{{user `prob_user_id`}}","{{user `root_user_id`}}"],
-            "ami_name": "awesome_{{timestamp}}",
+            "ami_name": "awesome_frontend_{{timestamp}}",
             "ami_description": "Ubuntu AMI for awesome",
             "launch_block_device_mappings": [
                 {
